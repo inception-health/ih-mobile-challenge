@@ -19,30 +19,53 @@ Using [Star Wars GraphQL API](https://graphql.org/swapi-graphql), create an _inf
 git clone git@github.com:{GH_USERNAME}/ih-mobile-challenge.git
 ```
 
-### Local Development
+# Welcome to your Expo app 👋
 
-This app follows the standard setup fo [react-native applications](https://reactnative.dev/docs/0.66/environment-setup) with typescript.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-#### Run Android
+## Get started
+
+1. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+2. Start the app
+
+   ```bash
+    npx expo start
+   ```
+
+In the output, you'll find options to open the app in a
+
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+## Get a fresh project
+
+When you're ready, run:
 
 ```bash
-npm run android
+npm run reset-project
 ```
 
-#### Run iOS
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-```bash
-npm run ios
-```
+## Learn more
 
-#### GraphQL
+To learn more about developing your project with Expo, look at the following resources:
 
-[GraphQL](https://graphql.org/learn/) generated types are located under `src/__generated__/graphql.tsx`. Uses [GraphQL Code Generator](https://www.graphql-code-generator.com/docs/getting-started) to generate the types. 
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-```bash
-npm run client:codegen
-```
+## Join the community
 
-#### UI Component Library
+Join our community of developers creating universal apps.
 
-This project has pre-installed the [React Native Elements](https://reactnativeelements.com/docs) library for convenience. It is not required to use this component library.
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
