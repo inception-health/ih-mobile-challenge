@@ -1,48 +1,50 @@
-# Inception Health React-Native Coding Challenge
+# Welcome to your Expo app 👋
 
-Using [Star Wars GraphQL API](https://graphql.org/swapi-graphql), create an _informative_ mobile app that _delights_ Star Wars fans! This will be your opportunity to showcase something you pride yourself on. This could be code organization, animation, testing, UX, UI, app performance, etc. You have as much time as you want to complete the challenge; however, we recommend no more than a few hours. We don't expect a production grade application, just a demonstration of your coding strengths. Play to your strengths with what you choose to build.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Ideas
+## Get started
 
-- Visualize an Entity details.
-- Visualize Entity Connections
-- Search
-- Rate Star Wars Characters
-- Vehicle E-Commerce
-- Planet Tourism Brochure
+1. Install dependencies
 
-## Getting Started
+   ```bash
+   npm install
+   ```
 
-### Use Template and Clone git repo
+2. Start the app
 
-```bash
-git clone git@github.com:{GH_USERNAME}/ih-mobile-challenge.git
-```
+   ```bash
+    npx expo start
+   ```
 
-### Local Development
+In the output, you'll find options to open the app in a
 
-This app follows the standard setup fo [react-native applications](https://reactnative.dev/docs/0.66/environment-setup) with typescript.
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-#### Run Android
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-```bash
-npm run android
-```
+## Get a fresh project
 
-#### Run iOS
+When you're ready, run:
 
 ```bash
-npm run ios
+npm run reset-project
 ```
 
-#### GraphQL
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-[GraphQL](https://graphql.org/learn/) generated types are located under `src/__generated__/graphql.tsx`. Uses [GraphQL Code Generator](https://www.graphql-code-generator.com/docs/getting-started) to generate the types. 
+## Learn more
 
-```bash
-npm run client:codegen
-```
+To learn more about developing your project with Expo, look at the following resources:
 
-#### UI Component Library
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-This project has pre-installed the [React Native Elements](https://reactnativeelements.com/docs) library for convenience. It is not required to use this component library.
+## Join the community
+
+Join our community of developers creating universal apps.
+
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
