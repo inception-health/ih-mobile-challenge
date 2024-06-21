@@ -1,3 +1,24 @@
+# Inception Health React-Native Coding Challenge
+
+Using [Star Wars GraphQL API](https://graphql.org/swapi-graphql), create an _informative_ mobile app that _delights_ Star Wars fans! This will be your opportunity to showcase something you pride yourself on. This could be code organization, animation, testing, UX, UI, app performance, etc. You have as much time as you want to complete the challenge; however, we recommend no more than a few hours. We don't expect a production grade application, just a demonstration of your coding strengths. Play to your strengths with what you choose to build.
+
+## Ideas
+
+- Visualize an Entity details.
+- Visualize Entity Connections
+- Search
+- Rate Star Wars Characters
+- Vehicle E-Commerce
+- Planet Tourism Brochure
+
+## Getting Started
+
+### Use Template and Clone git repo
+
+```bash
+git clone git@github.com:{GH_USERNAME}/ih-mobile-challenge.git
+```
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
