@@ -1,4 +1,5 @@
-/* eslint-disable */
+import { gql } from '@apollo/client';
+import * as Apollo from '@apollo/client';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -6,6 +7,7 @@ export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: 
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 export type MakeEmpty<T extends { [key: string]: unknown }, K extends keyof T> = { [_ in K]?: never };
 export type Incremental<T> = T | { [P in keyof T]?: P extends ' $fragmentName' | '__typename' ? T[P] : never };
+const defaultOptions = {} as const;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: { input: string; output: string; }
@@ -1302,3 +1304,108 @@ export type VehiclesEdge = {
   /** The item at the end of the edge */
   node?: Maybe<Vehicle>;
 };
+
+export type AllPeopleQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllPeopleQuery = { __typename?: 'Root', allPeople?: { __typename?: 'PeopleConnection', edges?: Array<{ __typename?: 'PeopleEdge', node?: { __typename?: 'Person', id: string, name?: string | null } | null } | null> | null } | null };
+
+export type AllFilmsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllFilmsQuery = { __typename?: 'Root', allFilms?: { __typename?: 'FilmsConnection', films?: Array<{ __typename?: 'Film', title?: string | null, episodeID?: number | null, openingCrawl?: string | null, director?: string | null, producers?: Array<string | null> | null, releaseDate?: string | null, created?: string | null, edited?: string | null, id: string } | null> | null } | null };
+
+
+export const AllPeopleDocument = gql`
+    query AllPeople {
+  allPeople {
+    edges {
+      node {
+        id
+        name
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useAllPeopleQuery__
+ *
+ * To run a query within a React component, call `useAllPeopleQuery` and pass it any options that fit your needs.
+ * When your component renders, `useAllPeopleQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useAllPeopleQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useAllPeopleQuery(baseOptions?: Apollo.QueryHookOptions<AllPeopleQuery, AllPeopleQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<AllPeopleQuery, AllPeopleQueryVariables>(AllPeopleDocument, options);
+      }
+export function useAllPeopleLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<AllPeopleQuery, AllPeopleQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<AllPeopleQuery, AllPeopleQueryVariables>(AllPeopleDocument, options);
+        }
+export function useAllPeopleSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<AllPeopleQuery, AllPeopleQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<AllPeopleQuery, AllPeopleQueryVariables>(AllPeopleDocument, options);
+        }
+export type AllPeopleQueryHookResult = ReturnType<typeof useAllPeopleQuery>;
+export type AllPeopleLazyQueryHookResult = ReturnType<typeof useAllPeopleLazyQuery>;
+export type AllPeopleSuspenseQueryHookResult = ReturnType<typeof useAllPeopleSuspenseQuery>;
+export type AllPeopleQueryResult = Apollo.QueryResult<AllPeopleQuery, AllPeopleQueryVariables>;
+export const AllFilmsDocument = gql`
+    query AllFilms {
+  allFilms(first: null) {
+    films {
+      title
+      episodeID
+      openingCrawl
+      director
+      producers
+      releaseDate
+      created
+      edited
+      id
+    }
+  }
+}
+    `;
+
+/**
+ * __useAllFilmsQuery__
+ *
+ * To run a query within a React component, call `useAllFilmsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useAllFilmsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useAllFilmsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useAllFilmsQuery(baseOptions?: Apollo.QueryHookOptions<AllFilmsQuery, AllFilmsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<AllFilmsQuery, AllFilmsQueryVariables>(AllFilmsDocument, options);
+      }
+export function useAllFilmsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<AllFilmsQuery, AllFilmsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<AllFilmsQuery, AllFilmsQueryVariables>(AllFilmsDocument, options);
+        }
+export function useAllFilmsSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<AllFilmsQuery, AllFilmsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<AllFilmsQuery, AllFilmsQueryVariables>(AllFilmsDocument, options);
+        }
+export type AllFilmsQueryHookResult = ReturnType<typeof useAllFilmsQuery>;
+export type AllFilmsLazyQueryHookResult = ReturnType<typeof useAllFilmsLazyQuery>;
+export type AllFilmsSuspenseQueryHookResult = ReturnType<typeof useAllFilmsSuspenseQuery>;
+export type AllFilmsQueryResult = Apollo.QueryResult<AllFilmsQuery, AllFilmsQueryVariables>;
